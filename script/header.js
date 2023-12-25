@@ -1,13 +1,13 @@
-function header(){
+function header(pageName){
     body = document.querySelector("body");
     main = document.querySelector("main");
     nav = document.createElement("nav");
 
     body.insertBefore(nav, main);
 
-    nav.outerHTML = "<nav class=\"navbar navbar-expand-sm navbar-dark bg-warning-subtle\" aria-label=\"Third navbar example\">\
+    nav.outerHTML = "<nav class=\"navbar navbar-expand-sm navbar-dark bg-warning-subtle fixed-top gnav\" aria-label=\"Third navbar example\">\
         <div class=\"container-fluid\">\
-            <a class=\"navbar-brand\" href=\"#\">cheatseet for myself</a>\
+            <a class=\"navbar-brand\" href=\"#\">Cheatseet for CTF</a>\
             <button class=\"navbar-toggler collapsed\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarsExample03\" aria-controls=\"navbarsExample03\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\
                 <span class=\"navbar-toggler-icon\"></span>\
             </button>\
@@ -15,7 +15,7 @@ function header(){
             <div class=\"navbar-collapse collapse\" id=\"navbarsExample03\" style=\"\">\
             <ul class=\"navbar-nav me-auto mb-2 mb-sm-0\">\
                 <li class=\"nav-item\">\
-                    <a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Home</a>\
+                    <a class=\"nav-link active\" aria-current=\"page\" href=\".\"></a>\
                 </li>\
                 <!-- <li class=\"nav-item\">\
                     <a class=\"nav-link\" href=\"#\">Link</a>\
@@ -37,6 +37,11 @@ function header(){
             </form> -->\
             </div>\
         </div>\
-    </nav>"
+        <div class=\"container-fluid\">\
+            " + pageName + "\
+        </div>\
+    \
+    </nav>\
+"
 
 }
