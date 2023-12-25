@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="dark">
+    <head>
+        <meta charset="utf-8">
+        <title>RSA</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+
+        <script type="text/javascript" src="../script/header.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.4/es5/tex-mml-chtml.js"></script>
+        <link rel="stylesheet" type="text/css" href="../styles/article.css">
+
+        <!-- To use tex : --- START --- -->
+        <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <!-- To use tex : ---  END  --- -->
+
+        <style type="text/css">
+            main > .container {
+              padding: 60px 15px 0;
+            }
+            .container {
+                align-items: flex-start;
+            }
+            .gnav {
+                flex-direction: column;
+            }
+            .arbitrary{
+                color: #6666FF;
+            }
+        </style>
+        <!-- use gnav for 2-array of navbar -->
+
+    </head>
+    <body class="bg-body text-white">
+        <script>header("RSA")</script>
+        <main class="flex-shrink-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9" id="main_content">
+                        <h2 class="mt-5">RSA</h2>
+                        <p class="text-body-secondary" id="date">posted 2023.12.25, last update 2023.12.25</p>
+
+                        <div class="section">
+                            <a name="sec1"></a>
+                            <h3>Algorithm</h3>
+                            <a>RSA encryption consists 3 algorithm: Key generation, Encryption, Decryption</a>
+                            <div class="subsection">
+                                <h4>Key generation</h4>
+                                <p><span class=text-info-emphasis>This coloerd variables</span> are defined by users.</p>
+                                <p><span class=text-warning-emphasis>This coloerd variables</span> cannot be defined by users.</p>
+                                <ol>
+                                    <li>Let \(\color{cyan}{p}\) and \(\color{cyan}{q}\) are big enough different prime numbers.</li>
+                                    <li>\(\color{yellow}{\lambda(n)} = (\color{cyan}{p}-1)(\color{cyan}{q}-1)\) </li>
+                                    <li>Let public exponent \(\color{cyan}{e}\) be a number satisfying \(\gcd(\color{yellow}{\lambda(n)}, \color{cyan}{e})\) and \(1\lt \color{cyan}{e} \lt \color{yellow}{\lambda(n)}\).
+                                        <br>There exist \(\color{yellow}{\lambda(n)}\) of \(\color{cyan}{e}\)'s. (\(\because\) Euler's totient function.)
+                                        <br>65537 is commonly used for \(\color{cyan}{e}\).</li>
+                                    <li>These \(\color{yellow}{\lambda(n)}\) and \(\color{cyan}{e}\) are public key.</li>
+                                    <li>The secret key \(\color{yellow}{d}\) is the number satisfying \(1\lt \color{yellow}{d} \lt \color{yellow}{\lambda(n)}\) and \(\color{cyan}{e}\times\color{yellow}{d}\!\mod\color{yellow}{\lambda(n)}=1\)
+                                        <br>The second equation is also denoted as \(\color{yellow}{d} = \color{cyan}{e}^{-1}\mod\color{yellow}{\lambda(n)}\).
+                                    </li>
+                                </ol>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-3">
+                        <div class="sticky-top mt-5" id="contents_list" style="top: 7rem;">
+                            <h5>Contents</h5>
+                            <p><a href="#sec1" class="text-reset">Overall</a></p>
+                            <p><a href="#sec2" class="text-reset">Inside Sections</a></p>
+                            <p><a href="#sec3" class="text-reset">Contents List</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

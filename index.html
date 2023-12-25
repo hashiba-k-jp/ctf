@@ -28,73 +28,92 @@
         <script>header("Home")</script>
         <main class="flex-shrink-0">
             <div class="container">
-                <h1 class="mt-5">Cheatsheets</h1>
-                <div class="container row" data-masonry="{&quot;percentPosition&quot;: true }" style="position: relative; height: 1855px; padding: 0;">
-                    <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-                        <h3>Python</h3>
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <div class="ms-2 me-auto">
-                                    <div class="fw-bold">Convert and Decode</div>
-                                    base64, hex vs string
-                                </div>
-                                <a href="./contents/convert.html" class="stretched-link"></a>
-                            </li>
-                            <!-- <li class="list-group-item">
-                                <div class="ms-2 me-auto">
-                                    <div class="fw-bold">Convert and Decode</div>
-                                    Converting int and string, int and hex
-                                </div>
-                                <a href="#2" class="stretched-link"></a>
-                            </li> -->
-                        </ul>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-                        <h3>Network</h3>
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <div class="ms-2 me-auto">
-                                    <div class="fw-bold">Wireshark</div>
-                                    search, extract, trace
-                                </div>
-                                <a href="#1" class="stretched-link"></a>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="ms-2 me-auto">
-                                    <div class="fw-bold">Program (Python)</div>
-                                    handle packets
-                                </div>
-                                <a href="#1" class="stretched-link"></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-                        <h3>Web</h3>
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <div class="ms-2 me-auto">
-                                    <div class="fw-bold">Burp Suite</div>
-                                    attack
-                                </div>
-                                <a href="#1" class="stretched-link"></a>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="masonry-box">
+                    <h1 class="mt-5">Cheatsheets</h1>
+                    <div class="container row" data-masonry="{&quot;percentPosition&quot;: true }" style="position: relative; height: 1855px; padding: 0;">
+                        <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+                            <h3>Python</h3>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Convert and Decode</div>
+                                        base64, hex vs string
+                                    </div>
+                                    <a href="./contents/convert.html" class="stretched-link"></a>
+                                </li>
+                                <!-- <li class="list-group-item">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Convert and Decode</div>
+                                        Converting int and string, int and hex
+                                    </div>
+                                    <a href="#2" class="stretched-link"></a>
+                                </li> -->
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+                            <h3>Network</h3>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Wireshark</div>
+                                        search, extract, trace
+                                    </div>
+                                    <a href="#1" class="stretched-link"></a>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Program (Python)</div>
+                                        handle packets
+                                    </div>
+                                    <a href="#1" class="stretched-link"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+                            <h3>Web</h3>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Burp Suite</div>
+                                        attack
+                                    </div>
+                                    <a href="#1" class="stretched-link"></a>
+                                </li>
+                            </ul>
+                        </div>
 
-                    <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-                        <h3>Crypto</h3>
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <div class="ms-2 me-auto">
-                                    <div class="fw-bold">RSA</div>
-                                    definitions
-                                </div>
-                                <a href="#1" class="stretched-link"></a>
-                            </li>
-                        </ul>
+                        <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+                            <h3>Crypto</h3>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">RSA</div>
+                                        documentation
+                                    </div>
+                                    <a href="./contents/rsa.html" class="stretched-link"></a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-
                 </div>
+
+
+                <!-- <div class="container row" data-masonry="{&quot;percentPosition&quot;: true }" style="position: relative; height: 1855px; padding: 0;">
+                    <h1 class="mt-5">Admin</h1>
+                    <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+                        <h3>Template</h3>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">Template</div>
+                                    for cheatseet.
+                                </div>
+                                <a href="./contents/template.html" class="stretched-link"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div> -->
+
             </div>
         </main>
     </body>
