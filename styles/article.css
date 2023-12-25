@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+#contents_list > p{
+    margin: 0;
+}
+
+.note{
+    margin-bottom: 16px;
+}
+
+dd > dl{
+    margin-bottom: 0px;
+}
+
+pre {
+    margin-bottom: 0px;
+}
+
+p{
+    margin-bottom: 4px;
+}
+
+#date{
+    margin-bottom: 16px;
+}

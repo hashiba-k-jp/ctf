@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="dark">
+    <head>
+        <meta charset="utf-8">
+        <title>Convert and Base64</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+
+        <script type="text/javascript" src="../script/header.js"></script>
+        <link rel="stylesheet" type="text/css" href="../styles/article.css">
+
+
+
+        <style type="text/css">
+            main > .container {
+              padding: 60px 15px 0;
+            }
+            .container {
+                align-items: flex-start;
+            }
+            .gnav {
+                flex-direction: column;
+            }
+        </style>
+        <!-- use gnav for 2-array of navbar -->
+
+    </head>
+    <body class="bg-body text-white">
+        <script>header("Convert and Base64")</script>
+        <main class="flex-shrink-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9" id="main_content">
+                        <h2 class="mt-5">Convert and Base64</h2>
+                        <p class="text-body-secondary" id="data">posted 2023.12.25</p>
+
+                        <div class="section">
+                            <h3><a name="sec1">Convert</a></h3>
+
+                            <dl class="row">
+                                <dt class="col-sm-2">Convert type</dt>
+                                <dd class="col-sm-10">
+                                    <dl class="row">
+                                        <dt class="col-sm-9"><code>run code</code></dt>
+                                        <dd class="col-sm-3"><code>output</code></dd>
+                                    </dl>
+                                </dd>
+
+                                <dt class="col-sm-2">Int to String</dt>
+                                <dd class="col-sm-10">
+                                    <dl class="row">
+                                        <dt class="col-sm-9"><code>str(11)</code></dt>
+                                        <dd class="col-sm-3"><code>'11'</code></dd>
+                                        <dt class="col-sm-9"><code>str(0x1b)</code></dt>
+                                        <dd class="col-sm-3"><code>'27'</code></dd>
+                                        <dt class="col-sm-9"><code>hex(0x1b)</code></dt>
+                                        <dd class="col-sm-3"><code>'0x1b'</code></dd>
+                                        <dt class="col-sm-9"><code>str([11, 0x0c, 0o15])</code></dt>
+                                        <dd class="col-sm-3"><code>'[11, 12, 13]'</code></dd>
+                                    </dl>
+                                </dd>
+
+                                <dt class="col-sm-2">String to Int</dt>
+                                <dd class="col-sm-10">
+                                    <dl class="row">
+                                        <dt class="col-sm-9"><code>int('11')</code></dt>
+                                        <dd class="col-sm-3"><code>11</code></dd>
+                                        <dt class="col-sm-9"><code>int('0x1b', 16)</code></dt>
+                                        <dd class="col-sm-3"><code>27</code></dd>
+                                        <dt class="col-sm-9"><code>int('1b', 16)</code></dt>
+                                        <dd class="col-sm-3"><code>27</code></dd>
+                                        <dt class="col-sm-9">
+                                            <code>t = "0123456789abcdef"</code><br><code>[int(t[x:x+2], 16) for x in range(0, len(t), 2)]</code>
+                                        </dt>
+                                        <dd class="col-sm-3"><code>[1, 35, 69, 103, 137, 171, 205, 239]</code></dd>
+                                    </dl>
+                                </dd>
+
+                                <dt class="col-sm-2">ascii to String</dt>
+                                <dd class="col-sm-10">
+                                    <dl class="row">
+                                        <dt class="col-sm-9"><code>chr(107)</code></dt>
+                                        <dd class="col-sm-3"><code>'k'</code></dd>
+                                        <dt class="col-sm-9"><code>chr(0x6b)</code></dt>
+                                        <dd class="col-sm-3"><code>'k'</code></dd>
+                                    </dl>
+                                </dd>
+
+                                <dt class="col-sm-2">String to ascii</dt>
+                                <dd class="col-sm-10">
+                                    <dl class="row">
+                                        <dt class="col-sm-9"><code>ord('k')</code></dt>
+                                        <dd class="col-sm-3"><code>107</code></dd>
+                                </dd>
+
+                            </dl>
+                        </div>
+
+                        <hr>
+
+                        <div class="section">
+                            <a name="sec2"></a>
+                            <h3>Base64</h3>
+                            <div class="p-3 text-info-emphasis bg-info-subtle border border-info-subtle rounded-3 note">
+                                <h6><i class="bi bi-info-circle-fill"></i> Info</h6>
+                                The package <code>base64</code> is required.
+                            </div>
+                            <dl class="row">
+                                <dt class="col-sm-2">Convert type</dt>
+                                <dd class="col-sm-10">
+                                    <dl class="row">
+                                        <dt class="col-sm-9"><code>run code</code></dt>
+                                        <dd class="col-sm-3"><code>output</code></dd>
+                                    </dl>
+                                </dd>
+
+                                <dt class="col-sm-2">Bytes to String</dt>
+                                <dd class="col-sm-10">
+                                    <dl class="row">
+                                        <dt class="col-sm-9"><code>b'Hello World!'.decode()</code></dt>
+                                        <dd class="col-sm-3"><code>'Hello World!'</code></dd>
+                                    </dl>
+                                </dd>
+
+                                <dt class="col-sm-2">String to Bytes</dt>
+                                <dd class="col-sm-10">
+                                    <dl class="row">
+                                        <dt class="col-sm-9"><code>'Hello World!'.encode()</code></dt>
+                                        <dd class="col-sm-3"><code>b'Hello World!'</code></dd>
+                                </dd>
+
+
+                                <dt class="col-sm-2">Encode Base64</dt>
+                                <dd class="col-sm-10">
+                                    <dl class="row">
+                                        <dt class="col-sm-9"><code>base64.b64encode(b"Hello World!")</code></dt>
+                                        <dd class="col-sm-3"><code>b'SGVsbG8gV29ybGQh'</code></dd>
+                                    </dl>
+                                </dd>
+
+
+                                <dt class="col-sm-2">Decode Base64</dt>
+                                <dd class="col-sm-10">
+                                    <dl class="row">
+                                        <dt class="col-sm-9"><code>base64.b64decode(b'SGVsbG8gV29ybGQh')</code></dt>
+                                        <dd class="col-sm-3"><code>b'Hello World!'</code></dd>
+                                    </dl>
+                                </dd>
+
+                            </dl>
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="col-md-3">
+                        <div class="sticky-top mt-5" id="contents_list" style="top: 7rem;">
+                            <h5>Contents</h5>
+                            <p><a href="#sec1" class="text-reset">Convert</a></p>
+                            <p><a href="#sec2" class="text-reset">Base64</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
