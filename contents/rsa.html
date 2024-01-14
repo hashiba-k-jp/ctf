@@ -45,7 +45,7 @@
                 <div class="row">
                     <div class="col-md-9" id="main_content">
                         <h2 class="mt-5">RSA</h2>
-                        <p class="text-body-secondary" id="date">posted 2023.12.25, last update 2023.12.25</p>
+                        <p class="text-body-secondary" id="date">posted 2023.12.25, last update 2023.12.26</p>
 
                         <div class="section">
                             <a name="sec1"></a>
@@ -62,12 +62,37 @@
                                         <br>There exist \(\color{yellow}{\lambda(n)}\) of \(\color{cyan}{e}\)'s. (\(\because\) Euler's totient function.)
                                         <br>65537 is commonly used for \(\color{cyan}{e}\).</li>
                                     <li>These \(\color{yellow}{\lambda(n)}\) and \(\color{cyan}{e}\) are public key.</li>
-                                    <li>The secret key \(\color{yellow}{d}\) is the number satisfying \(1\lt \color{yellow}{d} \lt \color{yellow}{\lambda(n)}\) and \(\color{cyan}{e}\times\color{yellow}{d}\!\mod\color{yellow}{\lambda(n)}=1\)
+                                    <li>The secret key \(\color{yellow}{d}\) is the number satisfying \(1\lt \color{yellow}{d} \lt \color{yellow}{\lambda(n)}\) and \(\color{cyan}{e}\times\color{yellow}{d}=1\mod\color{yellow}{\lambda(n)}\)
                                         <br>The second equation is also denoted as \(\color{yellow}{d} = \color{cyan}{e}^{-1}\mod\color{yellow}{\lambda(n)}\).
                                     </li>
                                 </ol>
+                                <div class="p-3 text-info-emphasis bg-info-subtle border border-info-subtle rounded-3 note">
+                                    <h6><i class="bi bi-info-circle-fill"></i> Note : Modular multiplicative inverse </h6>
+                                    <p>
+                                        Definition
+                                        <br>\(x^{-1} \equiv y \mod n \Leftrightarrow xy \equiv 1 \mod n\)
+                                    </p>
+                                    <p>
+                                        For example
+                                        <br>
+                                        \(
+                                            \begin{align}
+                                                3\times 4 &=12\equiv 1 &&\mod 11\\
+                                                3^{-1} &\equiv 4 &&\mod 11\\
+                                                4^{-1} &\equiv 3 &&\mod 11\\
+                                            \end{align}
+                                        \)
+                                    </p>
+                                </div>
                             </div>
+                            <div class="subsection">
+                                <h4>Encryption</h4>
+                                <ol>
+                                    <li>Let \(\color{red}{m}\) is the messeage to be encrypted.</li>
+                                    <li>Calculate cryptogram \(\color{green}{c}\) as \(\color{red}{m}^\color{red}{e}\mod \color{red}{\lambda(n)}\)</li>
+                                </ol>
 
+                            </div>
                         </div>
 
                     </div>
