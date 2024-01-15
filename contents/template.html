@@ -40,204 +40,251 @@
 
                         <div class="section">
                             <a name="sec1"></a>
-                            <h3><a>Overall</a></h3>
-                            <h4>Structure</h4>
-                            <p><code>#main_content</code> of all articles have the following structure.</p>
-                            <div class="p-3 text-light-emphasis bg-light-subtle border border-light-subtle rounded-3 note">
-                                <h6><i class="bi bi-code-slash"></i></h6>
-                                <pre><code>&lt;div class="col-md-9" id="main_content"&gt;
-    &lt;h2 class="mt-5"&gt;ARTICLE TITLE&lt;/h2&gt;
-    &lt;p class="text-body-secondary" id="date"&gt;posted DATE, last update DATE&lt;/p&gt;
+                            <h3>Overall</h3>
 
-    &lt;div class="section"&gt;
-        &lt;a name="SECTION_NAME"&gt;&lt;/a&gt;
-        &lt;h3&gt;SECTION TITLE&lt;/h3&gt;
-        &lt;p&gt;PARAGRAPH&lt;/p&gt;
-        &lt;p&gt;PARAGRAPH&lt;/p&gt;
-        ... and other elements.
-    &lt;/div&gt;
+                            <div class="part">
+                                <h4>Structure</h4>
+                                <p><code>#main_content</code> of all articles have the following structure.</p>
+                                <div class="p-3 text-light-emphasis bg-light-subtle border border-light-subtle rounded-3 note">
+                                    <h6>Structure</h6>
+                                    <pre><code>body > div.container >
+div.row
+├───div#main_content
+│   ├───h2.mt-5 (for article title)
+│   ├───p#date (for date)
+│   ├───div.section
+│   │   ├───h3 (for section title)
+│   │   ├───div.part
+│   │   │   ├───h4 (for part title)
+│   │   │   └───p, table, and other main contains
+│   │   ├───div.part
+│   │   ├───div.part
+│   │   └───...
+│   ├───div.section
+│   ├───div.section
+│   └───...
+└───div#contents_list (for the contents list)</code></pre>
+                                </div>
 
-    &lt;div class="section"&gt;
-        &lt;a name="SECTION_NAME"&gt;&lt;/a&gt;
-        &lt;h3&gt;SECTION TITLE&lt;/h3&gt;
-        &lt;p&gt;PARAGRAPH&lt;/p&gt;
-        &lt;p&gt;PARAGRAPH&lt;/p&gt;
-        ... and other elements.
-    &lt;/div&gt;
 
-    ... and other sections.
-&lt;/div&gt;
-
-&lt;div class="col-md-3"&gt;
-    &lt;div class="sticky-top mt-5" id="contents_list" style="top: 7rem;"&gt;
-        &lt;h5&gt;Contents&lt;/h5&gt;
-        &lt;p&gt;&lt;a href="#SECTION_NAME" class="text-reset"&gt;SECTION TITLE&lt;/a&gt;&lt;/p&gt;
-        &lt;p&gt;&lt;a href="#SECTION_NAME" class="text-reset"&gt;SECTION TITLE&lt;/a&gt;&lt;/p&gt;
-        ... and other sections.
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
                             </div>
 
-
-                            <h4>Data</h4>
-                            The element of data <code>&lt;p&gt;</code> must have the class <code>text-body-secondary</code> and the id <code>data</code>.
+                            <div class="part">
+                                <h4>Data</h4>
+                                The element of data <code>&lt;p&gt;</code> must have the class <code>text-body-secondary</code> and the id <code>data</code>.
+                            </div>
                         </div>
 
-                        <hr>
 
                         <div class="section">
                             <a name="sec2"></a>
                             <h3><a>Inside Sections</a></h3>
-                            <p>Use <code>&lt;hr&gt;</code> to make lines separating sections.</p>
 
-                            <h4>Table</h4>
-                            <p>Use <code>&lt;table class="table"&gt;</code></p>
+                            <div class="part">
+                                <h4>Table</h4>
+                                <div class="p-3 text-light-emphasis bg-light-subtle border border-light-subtle rounded-3 note">
+                                    <h6><i class="bi bi-code-slash"></i> Table</h6>
+                                    <pre><code>&lt;table class="table table-striped table-hover table-sm"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;#&lt;/th&gt;
+            &lt;th&gt;Heading&lt;/th&gt;
+            &lt;th&gt;Heading&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody class="table-group-divider"&gt;
+        &lt;tr&gt;
+            &lt;th&gt;1&lt;/th&gt;
+            &lt;th&gt;Cell&lt;/th&gt;
+            &lt;th&gt;Cell&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;2&lt;/th&gt;
+            &lt;th&gt;Cell&lt;/th&gt;
+            &lt;th&gt;Cell&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;3&lt;/th&gt;
+            &lt;th&gt;Cell&lt;/th&gt;
+            &lt;th&gt;Cell&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                                </div>
+                                <p>This code makes the following sample table.</p>
+                                <table class="table table-striped table-hover table-sm">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Heading</th>
+                                            <th>Heading</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="table-group-divider">
+                                        <tr>
+                                            <th>1</th>
+                                            <th>Cell</th>
+                                            <th>Cell</th>
+                                        </tr>
+                                        <tr>
+                                            <th>2</th>
+                                            <th>Cell</th>
+                                            <th>Cell</th>
+                                        </tr>
+                                        <tr>
+                                            <th>3</th>
+                                            <th>Cell</th>
+                                            <th>Cell</th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
 
-                            <h4>Lists</h4>
-                            <p>This is some additional paragraph placeholder content.
-                                It's a slightly shorter version of the other highly repetitive body text used throughout.
-                                This is an example unordered list:</p>
-                            <ul>
-                                <li>Use <code>&lt;ul&gt;</code> for unordred lists.</li>
-                                <li>Use <code>&lt;li&gt;</code> for elements.</li>
-                            </ul>
-                            <p>And this is an ordered list:<br>Use <code>&lt;ol&gt;</code> for unordred lists.</p>
-                            <ol>
-                                <li>Use <code>&lt;ol&gt;</code> for unordred lists.</li>
-                                <li>Use <code>&lt;li&gt;</code> for elements.</li>
-                            </ol>
+                            <div class="part">
+                                <h4>Lists</h4>
+                                <p>This is some additional paragraph placeholder content.
+                                    It's a slightly shorter version of the other highly repetitive body text used throughout.
+                                    This is an example unordered list:</p>
+                                <ul>
+                                    <li>Use <code>&lt;ul&gt;</code> for unordred lists.</li>
+                                    <li>Use <code>&lt;li&gt;</code> for elements.</li>
+                                </ul>
+                                <p>And this is an ordered list:<br>Use <code>&lt;ol&gt;</code> for unordred lists.</p>
+                                <ol>
+                                    <li>Use <code>&lt;ol&gt;</code> for unordred lists.</li>
+                                    <li>Use <code>&lt;li&gt;</code> for elements.</li>
+                                </ol>
 
-                            <p>Here is a description list:<br>Use <code>&lt;dl&gt;</code> for description lists.</p>
-                            <dl class="row">
+                                <p>Here is a description list:<br>Use <code>&lt;dl&gt;</code> for description lists.</p>
+                                <dl class="row">
 
-                                <dt class="col-sm-2"><code>&lt;dl&gt;</code></dt>
-                                <dd class="col-sm-10">must have the class <code>row</code></dd>
+                                    <dt class="col-sm-2"><code>&lt;dl&gt;</code></dt>
+                                    <dd class="col-sm-10">must have the class <code>row</code></dd>
 
-                                <dt class="col-sm-2"><code>&lt;dt&gt;</code></dt>
-                                <dd class="col-sm-10">Description Title</dd>
+                                    <dt class="col-sm-2"><code>&lt;dt&gt;</code></dt>
+                                    <dd class="col-sm-10">Description Title</dd>
 
-                                <dt class="col-sm-2"><code>&lt;dd&gt;</code></dt>
-                                <dd class="col-sm-10">Description Description</dd>
+                                    <dt class="col-sm-2"><code>&lt;dd&gt;</code></dt>
+                                    <dd class="col-sm-10">Description Description</dd>
 
-                                <dt class="col-sm-2">width</dt>
-                                <dd class="col-sm-10"><code>class="col-*-n"</code> is available in <code>&lt;dt&gt;</code> and <code>&lt;dd&gt;</code>.</dd>
+                                    <dt class="col-sm-2">width</dt>
+                                    <dd class="col-sm-10"><code>class="col-*-n"</code> is available in <code>&lt;dt&gt;</code> and <code>&lt;dd&gt;</code>.</dd>
 
-                                <dt class="col-sm-2">paragraph</dt>
-                                <dd class="col-sm-10"><code>&lt;p&gt;</code> is available.</dd>
+                                    <dt class="col-sm-2">paragraph</dt>
+                                    <dd class="col-sm-10"><code>&lt;p&gt;</code> is available.</dd>
 
-                                <dt class="col-sm-2">Nesting</dt>
-                                <dd class="col-sm-10">
-                                    <dl class="row">
-                                        <dt class="col-sm-4">Usgae</dt>
-                                        <dd class="col-sm-8">Just put <code>&lt;dl&gt;</code> under <code>&lt;dd&gt;</code>.</dd>
-                                        <dt class="col-sm-4">Note</dt>
-                                        <dd class="col-sm-8"><code>.col-*-n</code> is available inside a nest.</dd>
-                                    </dl>
-                                </dd>
+                                    <dt class="col-sm-2">Nesting</dt>
+                                    <dd class="col-sm-10">
+                                        <dl class="row">
+                                            <dt class="col-sm-4">Usgae</dt>
+                                            <dd class="col-sm-8">Just put <code>&lt;dl&gt;</code> under <code>&lt;dd&gt;</code>.</dd>
+                                            <dt class="col-sm-4">Note</dt>
+                                            <dd class="col-sm-8"><code>.col-*-n</code> is available inside a nest.</dd>
+                                        </dl>
+                                    </dd>
 
-                            </dl>
+                                </dl>
+                            </div>
 
-                            <h4>Code</h4>
-                            <p>
-                                Use <code>&lt;code&gt;</code> for inline codes.
-                                In order to write code block, write as below (This is as same as the light content except for icon).
-                            </p>
-                            <div class="p-3 text-light-emphasis bg-light-subtle border border-light-subtle rounded-3 note">
-                                <h6><i class="bi bi-code-slash"></i> Title for code block</h6>
-                                <pre><code>&lt;div class="p-3 text-light-emphasis bg-light-subtle border border-light-subtle rounded-3 note"&gt;
+                            <div class="part">
+                                <h4>Code Block</h4>
+                                <p>
+                                    Use <code>&lt;code&gt;</code> for inline codes.
+                                    In order to write code block, write as below (This is as same as the light content except for icon).
+                                </p>
+                                <div class="p-3 text-light-emphasis bg-light-subtle border border-light-subtle rounded-3 note">
+                                    <h6><i class="bi bi-code-slash"></i> Title for code block</h6>
+                                    <pre><code>&lt;div class="p-3 text-light-emphasis bg-light-subtle border border-light-subtle rounded-3 note"&gt;
     &lt;h6&gt;&lt;i class="bi bi-code-slash"&gt;&lt;/i&gt; Helloworld.c&lt;/h6&gt;
     &lt;pre&gt;&lt;code&gt;Here is the code.&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;</code></pre>
 </div>
 
-                            <p>Here is an example.</p>
-                            <div class="p-3 text-light-emphasis bg-light-subtle border border-light-subtle rounded-3 note">
-                                <h6><i class="bi bi-code-slash"></i> Helloworld.c</h6>
-                                <pre><code>#include &lt;stdio.h&gt;
+                                <p>Here is an example.</p>
+                                <div class="p-3 text-light-emphasis bg-light-subtle border border-light-subtle rounded-3 note">
+                                    <h6><i class="bi bi-code-slash"></i> Helloworld.c</h6>
+                                    <pre><code>#include &lt;stdio.h&gt;
 
 int main(void){
     printf("Hello World!");
     return 0;
 }</code></pre>
+                                </div>
+
+                                <div class="p-3 text-warning-emphasis bg-warning-subtle border border-warning-subtle rounded-3 note">
+                                    <h6><i class="bi bi-exclamation-diamond-fill"></i> Warning</h6>
+                                    Inside of <code>&lt;pre&gt;</code>, "<code>&lt;</code>" and "<code>&gt;</code>" must be escaped to <code>&amplt;</code> and <code>&ampgt;</code>.
+                                    <br>In addition, the html file should not be indented. (Spaces of indent will be displayed.)
+                                    <br>New lines just after <code>&lt;pre&gt;&lt;code&gt;</code> and before <code>&lt;/pre&gt;&lt;/code&gt;</code> is not needed.
+                                </div>
                             </div>
 
-                            <div class="p-3 text-warning-emphasis bg-warning-subtle border border-warning-subtle rounded-3 note">
-                                <h6><i class="bi bi-exclamation-diamond-fill"></i> Warning</h6>
-                                Inside of <code>&lt;pre&gt;</code>, "<code>&lt;</code>" and "<code>&gt;</code>" must be escaped to <code>&amplt;</code> and <code>&ampgt;</code>.
-                                <br>In addition, the html file should not be indented. (Spaces of indent will be displayed.)
-                                <br>New lines just after <code>&lt;pre&gt;&lt;code&gt;</code> and before <code>&lt;/pre&gt;&lt;/code&gt;</code> is not needed.
-                            </div>
+                            <div class="part">
+                                <h4>Notes</h4>
+                                <p>Use as below. They are not necessary to be in <code>&lt;p&gt;</code></p>
 
-                            <h4>Notes</h4>
-                            <p>Use as below. They are not necessary to be in <code>&lt;p&gt;</code></p>
-
-                            <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 note">
-                                <h6><i class="bi bi-bookmark-check-fill"></i> Primary</h6>
-                                <pre><code>&lt;div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 note"&gt;
+                                <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 note">
+                                    <h6><i class="bi bi-bookmark-check-fill"></i> Primary</h6>
+                                    <pre><code>&lt;div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 note"&gt;
     &lt;h6&gt;&lt;i class="bi bi-bookmark-check-fill"&gt;&lt;/i&gt; primary&lt;/h6&gt;
     &lt;pre&gt;&lt;code&gt;Primary contents&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;</code></pre>
-                            </div>
+                                </div>
 
-                            <div class="p-3 text-success-emphasis bg-success-subtle border border-success-subtle rounded-3 note">
-                                <h6><i class="bi bi-check-circle-fill"></i> Success</h6>
-                                <pre><code>&lt;div class="p-3 text-success-emphasis bg-success-subtle border border-success-subtle rounded-3 note"&gt;
+                                <div class="p-3 text-success-emphasis bg-success-subtle border border-success-subtle rounded-3 note">
+                                    <h6><i class="bi bi-check-circle-fill"></i> Success</h6>
+                                    <pre><code>&lt;div class="p-3 text-success-emphasis bg-success-subtle border border-success-subtle rounded-3 note"&gt;
     &lt;h6&gt;&lt;i class="bi bi-check-circle-fill"&gt;&lt;/i&gt; success&lt;/h6&gt;
     &lt;pre&gt;&lt;code&gt;Success contents&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;</code></pre>
-                            </div>
+                                </div>
 
 
-                            <div class="p-3 text-warning-emphasis bg-warning-subtle border border-warning-subtle rounded-3 note">
-                                <h6><i class="bi bi-exclamation-diamond-fill"></i> Warning</h6>
-                                <pre><code>&lt;div class="p-3 text-warning-emphasis bg-warning-subtle border border-warning-subtle rounded-3 note"&gt;
+                                <div class="p-3 text-warning-emphasis bg-warning-subtle border border-warning-subtle rounded-3 note">
+                                    <h6><i class="bi bi-exclamation-diamond-fill"></i> Warning</h6>
+                                    <pre><code>&lt;div class="p-3 text-warning-emphasis bg-warning-subtle border border-warning-subtle rounded-3 note"&gt;
     &lt;h6&gt;&lt;i class="bi bi-exclamation-diamond-fill"&gt;&lt;/i&gt; Warning&lt;/h6&gt;
     &lt;pre&gt;&lt;code&gt;Warning contents&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;</code></pre>
-                            </div>
+                                </div>
 
-                            <div class="p-3 text-danger-emphasis bg-danger-subtle border border-danger-subtle rounded-3 note">
-                                <h6><i class="bi bi-slash-circle-fill"></i> Danger</h6>
-                                <pre><code>&lt;div class="p-3 text-danger-emphasis bg-danger-subtle border border-danger-subtle rounded-3 note"&gt;
+                                <div class="p-3 text-danger-emphasis bg-danger-subtle border border-danger-subtle rounded-3 note">
+                                    <h6><i class="bi bi-slash-circle-fill"></i> Danger</h6>
+                                    <pre><code>&lt;div class="p-3 text-danger-emphasis bg-danger-subtle border border-danger-subtle rounded-3 note"&gt;
     &lt;h6&gt;&lt;i class="bi bi-slash-circle-fill"&gt;&lt;/i&gt; Danger&lt;/h6&gt;
     &lt;pre&gt;&lt;code&gt;Danger contents&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;</code></pre>
-                            </div>
+                                </div>
 
-                            <div class="p-3 text-info-emphasis bg-info-subtle border border-info-subtle rounded-3 note">
-                                <h6><i class="bi bi-info-circle-fill"></i> Info</h6>
-                                <pre><code>&lt;div class="p-3 text-info-emphasis bg-info-subtle border border-info-subtle rounded-3 note"&gt;
+                                <div class="p-3 text-info-emphasis bg-info-subtle border border-info-subtle rounded-3 note">
+                                    <h6><i class="bi bi-info-circle-fill"></i> Info</h6>
+                                    <pre><code>&lt;div class="p-3 text-info-emphasis bg-info-subtle border border-info-subtle rounded-3 note"&gt;
     &lt;h6&gt;&lt;i class="bi bi-info-circle-fill"&gt;&lt;/i&gt; Info&lt;/h6&gt;
     &lt;pre&gt;&lt;code&gt;Info contents&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;</code></pre>
-                            </div>
+                                </div>
 
-                            <div class="p-3 text-light-emphasis bg-light-subtle border border-light-subtle rounded-3 note">
-                                <h6><i class="bi bi-dot"></i> Light</h6>
-                                <pre><code>&lt;div class="p-3 text-light-emphasis bg-light-subtle border border-light-subtle rounded-3 note"&gt;
+                                <div class="p-3 text-light-emphasis bg-light-subtle border border-light-subtle rounded-3 note">
+                                    <h6><i class="bi bi-dot"></i> Light</h6>
+                                    <pre><code>&lt;div class="p-3 text-light-emphasis bg-light-subtle border border-light-subtle rounded-3 note"&gt;
     &lt;h6&gt;&lt;i class="bi bi-dot"&gt;&lt;/i&gt; Light&lt;/h6&gt;
     &lt;pre&gt;&lt;code&gt;Light contents&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;</code></pre>
+                                </div>
                             </div>
-
                         </div>
-
-                        <hr>
 
                         <div class="section">
                             <a name="sec3"></a>
                             <h3><a>Contents List</a></h3>
                             <p>Every <code>h3 > a</code> (Section titles) should have a <code>name</code> type for link.</p>
-
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="sticky-top mt-5" id="contents_list" style="top: 7rem;">
-                            <h5>Contents</h5>
-                            <p><a href="#sec1" class="text-reset">Overall</a></p>
-                            <p><a href="#sec2" class="text-reset">Inside Sections</a></p>
-                            <p><a href="#sec3" class="text-reset">Contents List</a></p>
-                        </div>
+                    <div class="col-md-3 sticky-top mt-5" id="contents_list" style="top: 7rem;">
+                        <h5>Contents</h5>
+                        <p><a href="#sec1" class="text-reset">Overall</a></p>
+                        <p><a href="#sec2" class="text-reset">Inside Sections</a></p>
+                        <p><a href="#sec3" class="text-reset">Contents List</a></p>
                     </div>
                 </div>
             </div>
