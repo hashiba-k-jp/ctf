@@ -7,7 +7,7 @@ function header(pageName){
 
     nav.outerHTML = "<nav class=\"navbar navbar-expand-sm navbar-dark bg-warning-subtle fixed-top gnav\" aria-label=\"Third navbar example\">\
         <div class=\"container-fluid\">\
-            <a class=\"navbar-brand\" href=\"/index.html\">Cheatseet for CTF</a>\
+            <a class=\"navbar-brand\" href=\"/ctf/index.html\">Cheatseet for CTF</a>\
             <button class=\"navbar-toggler collapsed\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarsExample03\" aria-controls=\"navbarsExample03\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\
                 <span class=\"navbar-toggler-icon\"></span>\
             </button>\
