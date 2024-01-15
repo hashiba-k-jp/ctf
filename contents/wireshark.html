@@ -41,21 +41,108 @@
                         <div class="section">
                             <a name="Filtering"></a>
                             <h3>Filtering</h3>
-                            <p>
+                            <div class="part">
+                                <h4>Filtering Types</h4>
+
+                                <p>Wireshark has 2 types of filtering.</p>
+                                <table class="table  table-sm">
+                                    <tbody class="">
+                                        <tr>
+                                            <th><span class="text-warning">Capture</span> filter</th>
+                                            <th>Capture <span class="text-warning text-uppercase">only</span> the packets which satisfy the filtering expressions.</th>
+                                        </tr>
+                                        <tr>
+                                            <th><span class="text-warning">Display</span> filter</th>
+                                            <th>Capture <span class="text-warning text-uppercase">every</span> packet, but display only the packets which satisfy the filtering expressions.</th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p>Expressions are the same for each filtering.</p>
+                            </div>
+                        </div>
+
+                        <div class="section">
+                            <a name="Filtering_Expressions"></a>
+                            <h3>Filtering Expressions</h3>
+                            <div class="part">
+                                <h4>Expressions</h4>
+                                <p>
+                                    The logical operators <code>and</code>(<code>&&</code>), <code>or</code>(<code>||</code>), <code>xor</code>(<code>^^</code>), and <code>not</code>(<code>!</code>) are available.
+                                    The <code>and</code> is stronger than <code>or</code>.
+                                </p>
+                            </div>
+                            <div class="part">
                                 <h4>Protocol</h4>
-                                Packets which is not ARP protocol.<br>
-                                <code>!arp</code>.
-                            </p>
-                            <p>
+                                <table class="table table-striped table-hover table-sm">
+                                    <thead>
+                                        <tr>
+                                            <th>Filter</th>
+                                            <th>Descriptions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="table-group-divider">
+                                        <tr>
+                                            <th><code>tcp</code></th>
+                                            <th>Show only tcp packets.</th>
+                                        </tr>
+                                        <tr>
+                                            <th><code>!arp</code></th>
+                                            <th>Show packets except for arp.</th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="part">
                                 <h4>Address</h4>
-                                Packets whose source address is 192.168.xxx.xxx, and destination address is 192.168.yyy.yyy.<br>
-                                <code>ip.src==192.168.xxx.xxx && ip.dst==192.168.yyy.yyy</code>
-                            </p>
-                            <p>
+                                <table class="table table-striped table-hover table-sm">
+                                    <thead>
+                                        <tr>
+                                            <th>Filter</th>
+                                            <th>Descriptions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="table-group-divider">
+                                        <tr>
+                                            <th><code>ip.src==192.168.xxx.xxx</code></th>
+                                            <th>Show packets only from the IP address 192.168.xxx.xxx.</th>
+                                        </tr>
+                                        <tr>
+                                            <th><code>ip.dst==192.168.yyy.yyy</code></th>
+                                            <th>Show packets only to the IP address 192.168.yyy.yyy.</th>
+                                        </tr>
+                                        <tr>
+                                            <th><code>ip.addr==192.168.zzz.zzz</code></th>
+                                            <th>Show packets which source and/or destination is 192.168.zzz.zzz.</th>
+                                        </tr>
+                                        <tr>
+                                            <th><code>tcp.dstport == 443</code></th>
+                                            <th>Show packets which destination port is 443.</th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="p-3 text-warning-emphasis bg-warning-subtle border border-warning-subtle rounded-3 note">
+                                    <h6><i class="bi bi-exclamation-diamond-fill"></i> Note</h6>
+                                    <p>When filtering with <code>ip.src</code> or <code>ip.dst</code>, only unidirectional packets will be shown. </p>
+                                </div>
+                            </div>
+
+                            <div class="part">
                                 <h4>URL</h4>
-                                Requests to the URL that contains "string".<br>
-                                <code>http.request.full_url ~ "string"</code>
-                            </p>
+                                <table class="table table-striped table-hover table-sm">
+                                    <thead>
+                                        <tr>
+                                            <th>Filter</th>
+                                            <th>Descriptions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="table-group-divider">
+                                        <tr>
+                                            <th><code>http.request.full_url ~ "ssss"</code></th>
+                                            <th>Show Request spackets to the URL that contains "ssss".</th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
 
                         <!-- <div class="section">
@@ -72,7 +159,6 @@
                         <div class="sticky-top mt-5" id="contents_list" style="top: 7rem;">
                             <h5>Contents</h5>
                             <p><a href="#Filtering" class="text-reset">Filtering</a></p>
-                            <!-- <p><a href="#SECTION_NAME" class="text-reset">SECTION TITLE</a></p> -->
                         </div>
                     </div>
                 </div>
