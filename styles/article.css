@@ -28,11 +28,12 @@ p{
     padding-top: 0.5em;
     padding-left: 0.5em;
     margin-bottom:0.5em;
-    border-top: solid #495058;
-    border-left: solid #495058;
+    border-top: solid #495058 3px;
+    border-left: solid #495058 3px;
 }
 
 .part{
     padding-top: 0.5em;
-    border-top: dashed #495058;
+    padding-right: 1em;
+    border-top: dashed #495058 2px;
 }
