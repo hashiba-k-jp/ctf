@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr" data-bs-theme="dark">
     <head>
         <meta charset="utf-8">
-        <title>Template</title>
+        <title>Encoder / Decoder</title>
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
@@ -29,6 +29,10 @@
 
             .copy-icon{
                 margin-right:1em;
+            }
+
+            .row{
+                margin-bottom: 3px;
             }
         </style>
         <!-- use gnav for 2-array of navbar -->
@@ -113,6 +117,123 @@
                                             <button class="btn btn-outline-secondary copy-icon" type="button" name="button" onclick="copyToClipboard('#E_Base64')"><i class="bi bi-clipboard"></i></button>
                                             <input  class="form-control font-monospace" type="text" value="" id="E_Base64" disabled readonly>
                                         </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-2 d-flex align-items-center h-auto">
+                                            <p>Caesar cipher</p>
+                                        </div>
+                                        <div class="col-10 align-items-center">
+                                            <p><button class="btn btn-outline-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Show caesar cipher</button></p>
+                                            <div class="collapse" id="collapseExample">
+                                                <div class="">
+                                                    <div class="d-flex align-items-center">
+                                                        <button class="btn btn-outline-secondary copy-icon" type="button" name="button" onclick="copyToClipboard('#E_Caesar_0')"><i class="bi bi-clipboard"></i></button>
+                                                        <input  class="form-control font-monospace" type="text" value="" id="E_Caesar_0" disabled readonly>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <button class="btn btn-outline-secondary copy-icon" type="button" name="button" onclick="copyToClipboard('#E_Caesar_1')"><i class="bi bi-clipboard"></i></button>
+                                                        <input  class="form-control font-monospace" type="text" value="" id="E_Caesar_1" disabled readonly>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <button class="btn btn-outline-secondary copy-icon" type="button" name="button" onclick="copyToClipboard('#E_Caesar_2')"><i class="bi bi-clipboard"></i></button>
+                                                        <input  class="form-control font-monospace" type="text" value="" id="E_Caesar_2" disabled readonly>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <button class="btn btn-outline-secondary copy-icon" type="button" name="button" onclick="copyToClipboard('#E_Caesar_3')"><i class="bi bi-clipboard"></i></button>
+                                                        <input  class="form-control font-monospace" type="text" value="" id="E_Caesar_3" disabled readonly>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <button class="btn btn-outline-secondary copy-icon" type="button" name="button" onclick="copyToClipboard('#E_Caesar_4')"><i class="bi bi-clipboard"></i></button>
+                                                        <input  class="form-control font-monospace" type="text" value="" id="E_Caesar_4" disabled readonly>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <button class="btn btn-outline-secondary copy-icon" type="button" name="button" onclick="copyToClipboard('#E_Caesar_5')"><i class="bi bi-clipboard"></i></button>
+                                                        <input  class="form-control font-monospace" type="text" value="" id="E_Caesar_5" disabled readonly>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <button class="btn btn-outline-secondary copy-icon" type="button" name="button" onclick="copyToClipboard('#E_Caesar_6')"><i class="bi bi-clipboard"></i></button>
+                                                        <input  class="form-control font-monospace" type="text" value="" id="E_Caesar_6" disabled readonly>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <button class="btn btn-outline-secondary copy-icon" type="button" name="button" onclick="copyToClipboard('#E_Caesar_7')"><i class="bi bi-clipboard"></i></button>
+                                                        <input  class="form-control font-monospace" type="text" value="" id="E_Caesar_7" disabled readonly>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <button class="btn btn-outline-secondary copy-icon" type="button" name="button" onclick="copyToClipboard('#E_Caesar_8')"><i class="bi bi-clipboard"></i></button>
+                                                        <input  class="form-control font-monospace" type="text" value="" id="E_Caesar_8" disabled readonly>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <button class="btn btn-outline-secondary copy-icon" type="button" name="button" onclick="copyToClipboard('#E_Caesar_9')"><i class="bi bi-clipboard"></i></button>
+                                                        <input  class="form-control font-monospace" type="text" value="" id="E_Caesar_9" disabled readonly>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <button class="btn btn-outline-secondary copy-icon" type="button" name="button" onclick="copyToClipboard('#E_Caesar_10')"><i class="bi bi-clipboard"></i></button>
+                                                        <input  class="form-control font-monospace" type="text" value="" id="E_Caesar_10" disabled readonly>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <button class="btn btn-outline-secondary copy-icon" type="button" name="button" onclick="copyToClipboard('#E_Caesar_11')"><i class="bi bi-clipboard"></i></button>
+                                                        <input  class="form-control font-monospace" type="text" value="" id="E_Caesar_11" disabled readonly>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <button class="btn btn-outline-secondary copy-icon" type="button" name="button" onclick="copyToClipboard('#E_Caesar_12')"><i class="bi bi-clipboard"></i></button>
+                                                        <input  class="form-control font-monospace" type="text" value="" id="E_Caesar_12" disabled readonly>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <button class="btn btn-outline-secondary copy-icon" type="button" name="button" onclick="copyToClipboard('#E_Caesar_13')"><i class="bi bi-clipboard"></i></button>
+                                                        <input  class="form-control font-monospace" type="text" value="" id="E_Caesar_13" disabled readonly>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <button class="btn btn-outline-secondary copy-icon" type="button" name="button" onclick="copyToClipboard('#E_Caesar_14')"><i class="bi bi-clipboard"></i></button>
+                                                        <input  class="form-control font-monospace" type="text" value="" id="E_Caesar_14" disabled readonly>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <button class="btn btn-outline-secondary copy-icon" type="button" name="button" onclick="copyToClipboard('#E_Caesar_15')"><i class="bi bi-clipboard"></i></button>
+                                                        <input  class="form-control font-monospace" type="text" value="" id="E_Caesar_15" disabled readonly>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <button class="btn btn-outline-secondary copy-icon" type="button" name="button" onclick="copyToClipboard('#E_Caesar_16')"><i class="bi bi-clipboard"></i></button>
+                                                        <input  class="form-control font-monospace" type="text" value="" id="E_Caesar_16" disabled readonly>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <button class="btn btn-outline-secondary copy-icon" type="button" name="button" onclick="copyToClipboard('#E_Caesar_17')"><i class="bi bi-clipboard"></i></button>
+                                                        <input  class="form-control font-monospace" type="text" value="" id="E_Caesar_17" disabled readonly>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <button class="btn btn-outline-secondary copy-icon" type="button" name="button" onclick="copyToClipboard('#E_Caesar_18')"><i class="bi bi-clipboard"></i></button>
+                                                        <input  class="form-control font-monospace" type="text" value="" id="E_Caesar_18" disabled readonly>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <button class="btn btn-outline-secondary copy-icon" type="button" name="button" onclick="copyToClipboard('#E_Caesar_19')"><i class="bi bi-clipboard"></i></button>
+                                                        <input  class="form-control font-monospace" type="text" value="" id="E_Caesar_19" disabled readonly>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <button class="btn btn-outline-secondary copy-icon" type="button" name="button" onclick="copyToClipboard('#E_Caesar_20')"><i class="bi bi-clipboard"></i></button>
+                                                        <input  class="form-control font-monospace" type="text" value="" id="E_Caesar_20" disabled readonly>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <button class="btn btn-outline-secondary copy-icon" type="button" name="button" onclick="copyToClipboard('#E_Caesar_21')"><i class="bi bi-clipboard"></i></button>
+                                                        <input  class="form-control font-monospace" type="text" value="" id="E_Caesar_21" disabled readonly>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <button class="btn btn-outline-secondary copy-icon" type="button" name="button" onclick="copyToClipboard('#E_Caesar_22')"><i class="bi bi-clipboard"></i></button>
+                                                        <input  class="form-control font-monospace" type="text" value="" id="E_Caesar_22" disabled readonly>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <button class="btn btn-outline-secondary copy-icon" type="button" name="button" onclick="copyToClipboard('#E_Caesar_23')"><i class="bi bi-clipboard"></i></button>
+                                                        <input  class="form-control font-monospace" type="text" value="" id="E_Caesar_23" disabled readonly>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <button class="btn btn-outline-secondary copy-icon" type="button" name="button" onclick="copyToClipboard('#E_Caesar_24')"><i class="bi bi-clipboard"></i></button>
+                                                        <input  class="form-control font-monospace" type="text" value="" id="E_Caesar_24" disabled readonly>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <button class="btn btn-outline-secondary copy-icon" type="button" name="button" onclick="copyToClipboard('#E_Caesar_25')"><i class="bi bi-clipboard"></i></button>
+                                                        <input  class="form-control font-monospace" type="text" value="" id="E_Caesar_25" disabled readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>

@@ -57,6 +57,11 @@ function endecode(){
     let E_Base64 = document.querySelector("#E_Base64");
     E_Base64.value = base64;
 
+    for(var i = 0; i < 26; i++){
+        let E_Caesar_i = document.querySelector("#E_Caesar_" + i.toString(10));
+        E_Caesar_i.value = caesar(text, i);
+    }
+
 }
 
 function encode_base64(bin){
@@ -86,6 +91,32 @@ function encode_base64(bin){
     return base64;
 }
 
+function caesar(text, num){
+    cipher = ""
+    for(var i = 0; i < text.length; i++){
+        cc = text[i]; //Current Char
+        ccc = cc.charCodeAt(0); //Current Char Code
+        if(97 <= ccc && ccc <= 122){
+            ccc = ccc + num;
+            if(122 < ccc){
+                ccc -= 26;
+            }else if(ccc < 97) {
+                ccc += 26;
+            }
+        }else if (65 <= ccc && ccc <= 90){
+            ccc = ccc + num;
+            if(90 < ccc){
+                ccc -= 26;
+            }else if(ccc < 65) {
+                ccc += 26;
+            }
+        }else{
+            ccc = ccc + 0;
+        }
+        cipher += String.fromCharCode(ccc);
+    }
+    return cipher;
+}
 
 
 function copyToClipboard (id) {
