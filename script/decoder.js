@@ -1,6 +1,7 @@
 window.addEventListener('DOMContentLoaded', function(){
     let input = document.querySelector("#input");
     input.addEventListener("input",endecode);
+
 });
 
 function endecode(){
@@ -46,6 +47,19 @@ function endecode(){
         E_Hex.value = hex;
     }
 
+    base64 = encode_base64(bin)
+
+    base64_pad_len = 0;
+    while(base64_pad_len < base64.length){
+        base64_pad_len += 4;
+    }
+    base64 = (base64 + "====").slice(0, base64_pad_len);
+    let E_Base64 = document.querySelector("#E_Base64");
+    E_Base64.value = base64;
+
+}
+
+function encode_base64(bin){
     let base64 = "";
     while(bin.length > 0){
         var tmp_bin = bin.slice(0,6).toString()
@@ -69,16 +83,24 @@ function endecode(){
         }
         base64 += tmp_char;
     }
-    console.log(base64);
+    return base64;
+}
 
-    base64_pad_len = 0;
-    while(base64_pad_len < base64.length){
-        base64_pad_len += 4;
+
+
+function copyToClipboard (id) {
+    let p = document.querySelector(id);
+
+    if (!navigator.clipboard) {
+        alert("Cannot copy at this browser...");
+        return;
     }
-    base64 = (base64 + "====").slice(0, base64_pad_len);
-    let E_Base64 = document.querySelector("#E_Base64");
-    E_Base64.value = base64;
-
-
-
+    navigator.clipboard.writeText(p.value).then(
+        () => {
+            // console.log("Copy Success!");
+        },
+        () => {
+            // console.log("Copy Failed...");
+        }
+    );
 }
