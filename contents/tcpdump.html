@@ -54,64 +54,51 @@
                             <a name="Expressions"></a>
                             <h3>Expressions</h3>
 
-                            <table class="table table-striped table-hover table-sm">
-                                <thead>
-                                    <tr>
-                                        <th>Expressions</th>
-                                        <th>Descriptions</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="table-group-divider">
-                                    <tr>
-                                        <th><code>host [192.168.XXX.XXX]</code></th>
-                                        <th>Ture when the source's and/or destination's IP address is [192.168.XXX.XXX].</th>
-                                    </tr>
-                                    <tr>
-                                        <th><code>dst host [192.168.YYY.YYY]</code></th>
-                                        <th>Ture when the destination IP address is [192.168.YYY.YYY].</th>
-                                    </tr>
-                                    <tr>
-                                        <th><code>src host [192.168.ZZZ.ZZZ]</code></th>
-                                        <th>Ture when the source IP address is [192.168.ZZZ.ZZZ].</th>
-                                    </tr>
-                                    <tr>
-                                        <th><code>port [PPP]</code></th>
-                                        <th>Ture when the source's and/or destination's port is [PPP].</th>
-                                    </tr>
-                                    <tr>
-                                        <th><code>src net [192.168.AAA.AAA] mask [255.255.255.BBB]</code></th>
-                                        <th>Ture when the source network address is [192.168.AAA.AAA] (subnet mask is [255.255.255.BBB]).</th>
-                                    </tr>
+                                <p>
+                                    The logical operators <code>and</code> and <code>not</code> are available.
+                                </p>
 
-                                </tbody>
-                            </table>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item man-li">
+                                    <p class="fw-bold"><code>host 192.168.XXX.XXX</code></p>
+                                    <p>Ture when the source's and/or destination's IP address is <code>192.168.XXX.XXX</code>.</p>
+                                </li>
+                                <li class="list-group-item man-li">
+                                    <p class="fw-bold"><code>dst host 192.168.YYY.YYY</code></p>
+                                    <p>Ture when the destination IP address is <code>192.168.YYY.YYY</code>.</p>
+                                </li>
+                                <li class="list-group-item man-li">
+                                    <p class="fw-bold"><code>src host 192.168.ZZZ.ZZZ</code></p>
+                                    <p>Ture when the source IP address is <code>192.168.ZZZ.ZZZ</code>.</p>
+                                </li>
+                                <li class="list-group-item man-li">
+                                    <p class="fw-bold"><code>port 443</code></p>
+                                    <p>Ture when the source's and/or destination's port is <code>443</code>.</p>
+                                </li>
+                                <li class="list-group-item man-li">
+                                    <p class="fw-bold"><code>src net 192.168.AAA.AAA mask 255.255.255.BBB</code></p>
+                                    <p>Ture when the source network address is <code>192.168.AAA.AAA</code> (subnet mask is <code>255.255.255.BBB</code>).</p>
+                                </li>
+                            </ul>
                         </div>
 
                         <div class="section">
                             <a name="Options"></a>
                             <h3>Options</h3>
-                            <table class="table table-striped table-hover table-sm">
-                                <thead>
-                                    <tr>
-                                        <th>Options</th>
-                                        <th>Descriptions</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="table-group-divider">
-                                    <tr>
-                                        <th><code>-W [FILENAME]</code></th>
-                                        <th>Write out the result of capturing into the [FILENAME].</th>
-                                    </tr>
-                                    <tr>
-                                        <th><code>-p</code></th>
-                                        <th>Show only the packets to current host.</th>
-                                    </tr>
-                                    <tr>
-                                        <th><code>-X</code></th>
-                                        <th>Show ascii strings with hex string.</th>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item man-li">
+                                    <p class="fw-bold"><code>-W [FILENAME]</code></p>
+                                    <p>Write out the result of capturing into the <code>[FILENAME]</code>.</p>
+                                </li>
+                                <li class="list-group-item man-li">
+                                    <p class="fw-bold"><code>-p</code></p>
+                                    <p>Show only the packets to current host.</p>
+                                </li>
+                                <li class="list-group-item man-li">
+                                    <p class="fw-bold"><code>-X</code></p>
+                                    <p>Show ascii strings with hex string.</p>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <div class="col-md-3">
