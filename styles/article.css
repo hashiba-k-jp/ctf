@@ -37,3 +37,8 @@ p{
     padding-right: 1em;
     border-top: dashed #495058 2px;
 }
+
+/* MANual-List */
+.man-li > p:nth-child(2){
+    padding-left: 2em;
+}
