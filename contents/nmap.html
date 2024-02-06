@@ -50,66 +50,69 @@
 
                             <div class="part">
                                 <!-- <h4>TCP</h4> -->
-                                <table class="table table-striped table-hover table-sm">
-                                    <thead>
-                                        <tr>
-                                            <th>Options</th>
-                                            <th>Descriptions</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="table-group-divider">
-                                        <tr>
-                                            <th><code>-sT</code></th>
-                                            <th>TCP connect scan (SYN, SYN-ACK, ACK, RESET)</th>
-                                        </tr>
-                                        <tr>
-                                            <th><code>-sS</code></th>
-                                            <th>TCP SYN scan (SYN, SYN-ACK, RESET)</th>
-                                        </tr>
-                                        <tr>
-                                            <th><code>-sA</code></th>
-                                            <th>TCP ACK scan (Only ACK flag -- can't distinguish whether ports are open or closed)</th>
-                                        </tr>
-                                        <!-- <tr>
-                                            <th><code>-sN</code></th>
-                                            <th>TCP Null scan (Without any flags)</th>
-                                        </tr> -->
-                                        <tr>
-                                            <th><code>-sU</code></th>
-                                            <th>UDP scan</th>
-                                        </tr>
-                                        <tr>
-                                            <th><code>-p [PORT RANGES]</code></th>
-                                            <th>Port specification, i.e. -p22; -p1-65535; -p U:53,111,137,T:21-25,80,139,8080,S:9</th>
-                                        </tr>
-                                        <tr>
-                                            <th><code>-O</code></th>
-                                            <th>Enables OS detection</th>
-                                        </tr>
-                                        <tr>
-                                            <th><code>-A</code></th>
-                                            <th>enable OS detection along with other things (incl. versions)</th>
-                                        </tr>
-                                        <tr>
-                                            <th><code>-sV</code></th>
-                                            <th>Enables version detection</th>
-                                        </tr>
-                                        <tr>
-                                            <th><code>--script<br>[FILENAME|CATEGORY|DIRECTORY|EXPRESSSION]</code></th>
-                                            <th>Runs a script scan<br>
-                                                <code>--script=banner</code>: banner scan
-                                            </th>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item man-li">
+                                        <p class="fw-bold"><code>-sT</code></p>
+                                        <p>TCP connect scan (SYN, SYN-ACK, ACK, RESET)</p>
+                                    </li>
+                                    <li class="list-group-item man-li">
+                                        <p class="fw-bold"><code>-sS</code></p>
+                                        <p>TCP SYN scan (SYN, SYN-ACK, RESET)</p>
+                                    </li>
+                                    <li class="list-group-item man-li">
+                                        <p class="fw-bold"><code>-sA</code></p>
+                                        <p>TCP ACK scan (Only ACK flag -- can't distinguish whether ports are open or closed)</p>
+                                    </li>
+                                    <!-- <li class="list-group-item man-li">
+                                        <p class="fw-bold"><code>-sN</code></p>
+                                        <p>TCP Null scan (Without any flags)</p>
+                                    </li> -->
+                                    <li class="list-group-item man-li">
+                                        <p class="fw-bold"><code>-sU</code></p>
+                                        <p>UDP scan</p>
+                                    </li>
+                                    <li class="list-group-item man-li">
+                                        <p class="fw-bold"><code>-p [PORT RANGES]</code></p>
+                                        <p>Port specification<br>
+                                            EX) <code>-p22</code> (scan port 22), <code>-p1-65535</code> (scan port from 1 to 65535)</p>
+                                    </li>
+                                    <li class="list-group-item man-li">
+                                        <p class="fw-bold"><code>-O</code></p>
+                                        <p>Enables OS detection</p>
+                                    </li>
+                                    <li class="list-group-item man-li">
+                                        <p class="fw-bold"><code>-A</code></p>
+                                        <p>enable OS detection along with other things (incl. versions)</p>
+                                    </li>
+                                    <li class="list-group-item man-li">
+                                        <p class="fw-bold"><code>-sV</code></p>
+                                        <p>Enables version detection</p>
+                                    </li>
+                                    <li class="list-group-item man-li">
+                                        <p class="fw-bold"><code>--script[FILENAME|CATEGORY|DIRECTORY|EXPRESSSION]</code></p>
+                                        <p>Runs a script scan<br>
+                                            <code>--script=banner</code>: banner scan
+                                        </p>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
 
-
-                        <div class="section">
-
+                        <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 note">
+                            <h6><i class="bi bi-bookmark-check-fill"></i> TCP</h6>
+                            <pre><code>┌───┐                   ┌───┐
+│ S │ ───(1   SYN  )──> │ D │
+│   │                   │   │
+│ R │ <──(2 SYN─ACK)─── │ S │
+│   │                   │   │
+│ C │ ───(3   ACK  )──> │ T │
+└───┘                   └───┘</code></pre>
                         </div>
 
+
+
+                        <div class="section">
+                        </div>
                     </div>
                     <div class="col-md-3 sticky-top mt-5" id="contents_list" style="top: 7rem;">
                         <h5>Contents</h5>
