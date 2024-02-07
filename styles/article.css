@@ -38,7 +38,17 @@ p{
     border-top: dashed #495058 2px;
 }
 
+
+tt {
+  font-family: "SFMono-Regular", "Menlo", "Monaco", "Courier", monospace;
+  font-size: 14px;
+}
+
 /* MANual-List */
-.man-li > p:nth-child(2){
+.man-li > p{
     padding-left: 2em;
+}
+
+.man-li > p:nth-child(1){
+    padding-left: 0;
 }
