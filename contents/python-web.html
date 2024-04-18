@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="dark">
+    <head>
+        <meta charset="utf-8">
+        <title>Handling http requests with Python</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+
+        <script type="text/javascript" src="../script/header.js"></script>
+        <link rel="stylesheet" type="text/css" href="../styles/article.css">
+
+
+
+        <style type="text/css">
+            main > .container {
+              padding: 60px 15px 0;
+            }
+            .container {
+                align-items: flex-start;
+            }
+            .gnav {
+                flex-direction: column;
+            }
+        </style>
+        <!-- use gnav for 2-array of navbar -->
+        <meta name="viewport" content="width=device-width" >
+    </head>
+    <body class="bg-body text-white">
+        <script>header("Handling http requests with Python")</script>
+        <main class="flex-shrink-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9" id="main_content">
+                        <h2 class="mt-5">Handling http requests with Python</h2>
+                        <p class="text-body-secondary" id="date">posted 2024.04.18</p>
+
+                        <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 note">
+                            <h6><i class="bi bi-bookmark-check-fill"></i> Before use...</h6>
+                            <code>import requests</code>
+                        </div>
+
+                        <div class="section">
+                            <a name="sec1"></a>
+                            <h3>Send Requests</h3>
+
+                            <div class="part">
+                                <!-- <h4>Table</h4> -->
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item man-li">
+                                        <p class="">Basic Expression</p>
+                                        <p><code>[RESPONSE(optional)] = request.[METHOD]([URL], [PARAMETER(optional)])</code> </p>
+                                    </li>
+                                    <li class="list-group-item man-li">
+                                        <p class="">Usual request</p>
+                                        <p>e.g. <code>r = requests.get(f'https://example.com/index.php?id={id}')</code></p>
+                                    </li>
+                                    <li class="list-group-item man-li">
+                                        <p class="">With parameter data</p>
+                                        <p>e.g. <code>s.post('https://example.com', data={'id': id, 'data': text})</code></p>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="section">
+                            <a name="sec2"></a>
+                            <h3><a>Recieve response</a></h3>
+
+                            <div class="part">
+                                <h4>Attributes of response object</h4>
+                                <table class="table table-striped table-hover table-sm">
+                                    <thead>
+                                        <tr>
+                                            <th>Attr name</th>
+                                            <th>Value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="table-group-divider">
+                                        <tr>
+                                            <th><code>url</code> </th>
+                                            <th>url</th>
+                                        </tr>
+                                        <tr>
+                                            <th><code>status_code</code></th>
+                                            <th>status code</th>
+                                        </tr>
+                                        <tr>
+                                            <th><code>headers</code> </th>
+                                            <th>response header
+                                                <br> e.g. <code>{'Content-Encoding': 'gzip', ...}</code>
+                                                <br> This attr is Type of CaseInsensitiveDict (basically same to dict)</th>
+                                        </tr>
+                                        <tr>
+                                            <th><code>text</code></th>
+                                            <th>Contents of response (<strong>Decoded!</strong>)
+                                                <br> e.g. <code>&lt;!DOCTYPE html&gt; ...</code> </th>
+                                        </tr>
+                                        <tr>
+                                            <th><code>content</code></th>
+                                            <th>Contents of response (<strong>NOT Decoded; byte object</strong>)</th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-3 d-none d-md-block">
+                        <div class="sticky-top mt-5" id="contents_list" style="top: 7rem;">
+                            <h5>Contents</h5>
+                            <p><a href="#sec1" class="text-reset">Send Requests</a></p>
+                            <p><a href="#sec2" class="text-reset">Recieve response</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
