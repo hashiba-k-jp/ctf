@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="dark">
+    <head>
+        <meta charset="utf-8">
+        <title>LLDB / clang</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+
+        <script type="text/javascript" src="../script/header.js"></script>
+        <link rel="stylesheet" type="text/css" href="../styles/article.css">
+
+
+
+        <style type="text/css">
+            main > .container {
+              padding: 60px 15px 0;
+            }
+            .container {
+                align-items: flex-start;
+            }
+            .gnav {
+                flex-direction: column;
+            }
+        </style>
+        <!-- use gnav for 2-array of navbar -->
+        <meta name="viewport" content="width=device-width" >
+    </head>
+    <body class="bg-body text-white">
+        <script>header("LLDB / clang")</script>
+        <main class="flex-shrink-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9" id="main_content">
+                        <h2 class="mt-5">LLDB / clang</h2>
+                        <p class="text-body-secondary" id="date">posted 2024.08.07</p>
+
+                        <div class="section">
+                            <a name="SECTION_NAME"></a>
+                            <h3>LLDB Usage</h3>
+                            <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 note">
+                                <h6><i class="bi bi-bookmark-check-fill"></i> Before use lldb</h6>
+                                <p><code>file EXE_FILE_NAME</code> </p>
+                            </div>
+
+                            <div class="p-3 text-warning-emphasis bg-warning-subtle border border-warning-subtle rounded-3 note">
+                                <h6><i class="bi bi-exclamation-diamond-fill"></i> C lang compiling</h6>
+                                <p>To set breakpoint by the file name : <code>clang -g -O0 FILENAME.c [-o EXE_FILE]</code> </p>
+                            </div>
+
+
+                            <div class="part">
+                                <h4>Breakpoint</h4>
+                                <dl class="row">
+                                    <dt class="col-sm-5">Set breakpoint by a func name</dt>
+                                    <dd class="col-sm-7"><code>breakpoint set -n FUNC_NAME</code></dd>
+
+                                    <dt class="col-sm-5">Set breakpoint by a line number of the file</dt>
+                                    <dd class="col-sm-7"><code>breakpoint set -f FILE_NAME -l LINE_NUM</code> || <code>b FILE_NAME:LINE_NUM</code></dd>
+
+                                    <dt class="col-sm-5">Show all the breakpoints</dt>
+                                    <dd class="col-sm-7"><code>breakpoint list</code></dd>
+
+                                    <dt class="col-sm-5">Show delete breakpoints</dt>
+                                    <dd class="col-sm-7"><code>breakpoint delete [BREAKPOINT_NUM, ...]</code><br>
+                                    <i class="bi bi-exclamation-diamond-fill"></i> If the BP number(s) is not given, all BP will be deleted.</dd>
+                                </dl>
+
+                                <h4>Run</h4>
+                                <dl class="row">
+                                    <dt class="col-sm-5">Run</dt>
+                                    <dd class="col-sm-7"><code>r</code> || <code>run</code></dd>
+
+                                    <dt class="col-sm-5">(In running process) Run by step</dt>
+                                    <dd class="col-sm-7"><code>s</code> || <code>step</code></dd>
+
+                                    <dt class="col-sm-5">(In running process) Run to next BP</dt>
+                                    <dd class="col-sm-7"><code>c</code> || <code>continue</code></dd>
+
+                                    <dt class="col-sm-5">(In running process) Show values of variables</dt>
+                                    <dd class="col-sm-7"><code>p VAR_NAME</code> || <code>print VAR_NAME</code></dd>
+
+                                    <dt class="col-sm-5">(In running process) Stop the process</dt>
+                                    <dd class="col-sm-7"><code>kill</code></dd>
+
+                                </dl>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-3 d-none d-md-block">
+                        <!-- <div class="sticky-top mt-5" id="contents_list" style="top: 7rem;">
+                            <h5>Contents</h5>
+                            <p><a href="#Filtering" class="text-reset">Filtering</a></p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

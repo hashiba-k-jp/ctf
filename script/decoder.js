@@ -9,7 +9,7 @@ function endecode(){
     l = text.length;
     add_space_mono = false;
 
-    // Decode
+    // Encode
     let bin = "";
     let hex = ""
     for(var i=0; i < l; i++){
@@ -61,6 +61,11 @@ function endecode(){
         let E_Caesar_i = document.querySelector("#E_Caesar_" + i.toString(10));
         E_Caesar_i.value = caesar(text, i);
     }
+
+
+    // Decode
+
+
 
 }
 
@@ -117,6 +122,7 @@ function caesar(text, num){
     }
     return cipher;
 }
+
 
 
 function copyToClipboard (id) {

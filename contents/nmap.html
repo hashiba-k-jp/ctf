@@ -74,7 +74,8 @@
                                     <li class="list-group-item man-li">
                                         <p class="fw-bold"><code>-p [PORT RANGES]</code></p>
                                         <p>Port specification<br>
-                                            EX) <code>-p22</code> (scan port 22), <code>-p1-65535</code> (scan port from 1 to 65535)</p>
+                                            ･ <code>-p-</code> : same as <code>-p1-65535</code> (all port)<br>
+                                            ･ <code>-p22</code>  : scan only the port 22
                                     </li>
                                     <li class="list-group-item man-li">
                                         <p class="fw-bold"><code>-O</code></p>
@@ -82,7 +83,7 @@
                                     </li>
                                     <li class="list-group-item man-li">
                                         <p class="fw-bold"><code>-A</code></p>
-                                        <p>enable OS detection along with other things (incl. versions)</p>
+                                        <p>enable OS detection along with other information. (incl. versions)</p>
                                     </li>
                                     <li class="list-group-item man-li">
                                         <p class="fw-bold"><code>-sV</code></p>
@@ -91,8 +92,13 @@
                                     <li class="list-group-item man-li">
                                         <p class="fw-bold"><code>--script[FILENAME|CATEGORY|DIRECTORY|EXPRESSSION]</code></p>
                                         <p>Runs a script scan<br>
-                                            <code>--script=banner</code>: banner scan
+                                            ･ <code>-sC</code> : same as <code>-–script=default</code><br>
+                                            ･ <code>--script=banner</code> : banner scan
                                         </p>
+                                    </li>
+                                    <li class="list-group-item man-li">
+                                        <p class="fw-bold"><code>-oA [OUTPUT FILENAME]</code></p>
+                                        <p>Save outputs. Several files may be created.</p>
                                     </li>
                                 </ul>
                             </div>
@@ -111,8 +117,8 @@
 
 
 
-                        <div class="section">
-                        </div>
+                        <!-- <div class="section">
+                        </div> -->
                     </div>
                     <div class="col-md-3 d-none d-md-block">
                         <div class="sticky-top mt-5" id="contents_list" style="top: 7rem;">
