@@ -69,25 +69,36 @@
                                     <i class="bi bi-exclamation-diamond-fill"></i> If the BP number(s) is not given, all BP will be deleted.</dd>
                                 </dl>
 
+
+                                <!-- (lldb) disassemble --name main
+                                (lldb) di -n main -->
+
                                 <h4>Run / Commands in running process</h4>
                                 <dl class="row">
                                     <dt class="col-sm-5">Run</dt>
                                     <dd class="col-sm-7"><code>r</code> || <code>run</code></dd>
 
-                                    <dt class="col-sm-5">(In running process) Run by step</dt>
+                                    <dt class="col-sm-5">Run by step</dt>
                                     <dd class="col-sm-7"><code>s</code> || <code>step</code></dd>
 
-                                    <dt class="col-sm-5">(In running process) Run to next BP</dt>
+                                    <dt class="col-sm-5">Run to next BP</dt>
                                     <dd class="col-sm-7"><code>c</code> || <code>continue</code></dd>
 
-                                    <dt class="col-sm-5">(In running process) Show values of variables</dt>
+                                    <dt class="col-sm-5">Show values of variables</dt>
                                     <dd class="col-sm-7"><code>p VAR_NAME</code> || <code>print VAR_NAME</code></dd>
 
-                                    <dt class="col-sm-5">(In running process) Stop the process</dt>
+                                    <dt class="col-sm-5">Change variable values in running process</dt>
+                                    <dd class="col-sm-7"><code>expr VAR_NAME=VAR_VALUE</code></dd>
+
+                                    <dt class="col-sm-5">Stop the process</dt>
                                     <dd class="col-sm-7"><code>kill</code></dd>
 
-                                    <dt class="col-sm-5">(In running process) Read the value of registers (<code>REGISTER</code> = rsp, rbp, ...)</dt>
+                                    <dt class="col-sm-5">Read the value of registers (<code>REGISTER</code> = rsp, rbp, ...)</dt>
                                     <dd class="col-sm-7"><code>register read REGISTER</code></dd>
+
+                                    <!-- (gdb) x/100gb $rbp - 0x30 -->
+                                    <!-- (gdb) x/30gb  $rip -->
+                                    <!-- etc... -->
 
                                 </dl>
 
@@ -95,6 +106,9 @@
                                 <dl class="row">
                                     <dt class="col-sm-5">Run shell commands (ls, clear, etc...)</dt>
                                     <dd class="col-sm-7"><code>shell COMMANDS</code>
+
+                                    <dt class="col-sm-5">Disassemble by funtion name</dt>
+                                    <dd class="col-sm-7">( <code>disassemble</code> || <code>disas</code> ) <code> -n FUNCTION_NAME</code>
                                 </dl>
                             </div>
                         </div>
